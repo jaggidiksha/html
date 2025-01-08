@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// iterable objects : on which loop works 
+// array ,objects,strings
+
+// non-iterable objects : onnwhich loop doesnot works
+// integer, boolean
+
+
+    // for in:it works on the iterable objects
+// syntax
+// for(variable in objectname){
+//     statement
+// }
+
+const qw={
+    name:"eric",
+    age:34,
+    gender:"male",
+    occupation:"developer"
+}
+
+
+// to access keys
+for( x in qw){
+    console.log(x);
+}
+
+// to access values
+for(x in qw){
+    console.log(qw[x])
+}
+
+// to access both
+
+for(x in qw){
+    console.log(x,qw[x])
+}
+
+
+let ar=[2,3,4,5,6,7,8]
+for(y in ar){
+    console.log(y)
+}
+
+for(y in ar){
+    console.log(ar[y])
+}
+
+for(y in ar){
+    console.log(y,ar[y])
+}
+
+
+
+
+
+
+
+
+    // for of:it works on the values of iterable objects
+
+// syntax
+    // for(variable of objectname){
+    //     statement
+    // }
+    // let arr=[3,4,5,6,7]
+    // for(x of arr){
+    //     console.log(x)
+    // }
+
+    // let str="car bike bus"
+    // for(y of str){
+    //     console.log(y)
+    // }
+
+
+
+
+
+
+
+
+
+    // forEach:it is used to perform opeartion on each element of an array
+let ary=[2,3,4,5]
+ary.forEach(function(x){
+console.log(x*2)
+})
+
+
+
+//     for(let i=1;i<=5;i++){
+
+// for(let j=1;j<=5;j++){
+//     document.write("*")
+// }
+//         document.write("<br>")
+//     }
+</script>
+    
+</body>
+</html>
