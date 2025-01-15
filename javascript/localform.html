@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <label>Name</label>
+        <input type="text" id="name"><br>
+        <label>Phonenno</label>
+        <input type="tel" id="number"><br>
+        <label>Age</label>
+        <input type="number" id="age"><br>
+        <label>Mothers name</label>
+        <input type="text" id="mother"><br>
+        <label>Fathers name</label>
+        <input type="text" id="father"><br>
+        <input type="submit">
+    </form>
+    <script>
+     let form=document.getElementById("myform")
+     
+     form.addEventListener("submit",function(e){
+        e.preventDefault();
+      let name= document.getElementById("name").value;
+      let number=document.getElementById("number").value;
+      let age=document.getElementById("age").value;
+      let mothername=document.getElementById("mother").value;
+      let fathername=document.getElementById("father").value;
+
+   
+
+      var formdata={
+        "name":name,
+        "age":age,
+        "number":number,
+        "mothername":mothername,
+        "fathername":fathername
+      }
+
+  let jsonform=JSON.stringify(formdata)
+
+  localStorage.setItem("formdata",jsonform)
+  let data=localStorage.getItem("formdata")
+  console.log(data)
+      
+    // JSON:javascript object notation
+// :JSON.stringify():json>strings
+// JSON.parse():strings>json
+
+
+    //   console.log("name",name)
+     })
+
+
+    </script>
+    
+</body>
+</html>

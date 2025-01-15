@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // scoping:determines the visibility of functions variables and objects in differentparts of your code 
+        // global scoping :varibales declared outside of any function or block 
+        // local scoping :varibales declared inside the function or block 
+
+        // functional scope  :varibles accessible inside the function are functional scoped and var is a functional scope varibles
+
+        // block scope:varibles accesssible inside the block of code are block scoped and let and const are having block scope
+
+        //         let glovar="im gloval";
+        //         // console.log(glovar)
+
+        //         function abc(){
+        // console.log(glovar)
+        //         }
+        //         abc()
+
+        // function x(){
+        //     var func="im a functional scope";
+        //     console.log(func)
+        // }
+        // x()
+
+        // if (true){
+        //     let blok="im block scope"
+        //     console.log(blok)
+        // }
+
+        // closures /lexical scoping:es6 (arrow functions)
+        // arrow function
+        // const abc=(parameter1,parameter2)=>{
+        // // block of code
+        // }
+        // abc(argument1,argument2)
+
+        // lexical scoping in action says that we have two functions one is outerfuntion and other is inner function , innerfuntion can access the parameters and varibles of outerfuntion
+
+
+        // const outerfun = (a) => {
+        //     let b = 12;
+
+        //     const innerfun = () => {
+        //         let sum = a + b
+        //         console.log(`the sum of two numbers is ${sum}`)
+        //         // console.log("the sum of two numbers is ",sum)
+        //     }
+        //     innerfun()
+        // }
+        // outerfun(10)
+
+        // the sum of two numbers is 22
+        // the sum of two numbers is : strings
+        // 22 :expression(sum)
+
+        // localStorage: client-side web storage feature ,limitation is that we can only store the data in key value pair 
+
+        // to set item in localstorage
+
+//         localStorage.setItem("username","diksha jaggi")
+//         // access
+//        let data= localStorage.getItem("username")
+// console.log(data)
+
+
+
+    </script>
+
+</body>
+
+</html>
