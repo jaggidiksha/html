@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="getdata()">get data</button>
+
+    <script>
+
+        //    let btn= document.getElementById("btn")
+        //    btn.addEventListener("click",function(){
+
+        //    })
+        function getdata() {
+
+            let xhr = new XMLHttpRequest()
+
+            xhr.open("GET", "myfile.txt", "true")
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.write(this.responseText)
+                }
+            }
+            xhr.send()
+
+        }
+
+    </script>
+
+</body>
+
+</html>
