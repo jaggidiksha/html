@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>to do list</h1>
+    <input type="text" id="myinput">
+    <button onclick="newelement()">Add</button>
+    <ul id="myul">
+
+    </ul>
+    <script>
+        function newelement(){
+            
+           li= document.createElement("li")
+          inputvalue= document.getElementById("myinput").value
+
+          if(inputvalue===""){
+            alert("provide a to-do first")
+          }
+
+
+      
+
+
+         textnode= document.createTextNode(inputvalue)
+         li.appendChild(textnode)
+
+
+
+         dltbtn= document.createElement("button")
+         dltbtn.appendChild(document.createTextNode("delete"))
+
+         dltbtn.onclick=function(){
+          listitem=  this.parentElement;
+          listitem.remove()
+         }
+
+         li.appendChild(dltbtn)
+
+         editbtn=   document.createElement("button")
+          editbtn.appendChild(document.createTextNode("edit"))
+
+       editbtn.onclick=function(){
+       newtext= prompt("enter modified to do")
+     if(newtext !== null && newtext !==""){
+        textnode.nodeValue =newtext
+     }
+
+       }
+
+          li.appendChild(editbtn)
+       
+
+
+
+
+         document.getElementById("myul").appendChild(li)
+
+        }
+    </script>
+</body>
+</html>
