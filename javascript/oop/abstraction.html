@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class CoffeMachine{
+
+constructor(){
+    this.wateramount=0
+}
+
+
+fillwater(amount){
+this.wateramount+=amount
+}
+
+
+boilwater(){
+    console.log("water is boiling....")
+}
+
+makecoffee(){
+
+    if(this.wateramount>0){
+        this.boilwater()
+        console.log("coffee is ready")
+    }else{
+        console.log("not enough water")
+    }
+
+}
+
+        }
+
+        let machine=new CoffeMachine()
+        machine.fillwater(780)
+        machine.makecoffee()
+    </script>
+</body>
+</html>
