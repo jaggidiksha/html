@@ -24,7 +24,6 @@ boilwater(){
 }
 
 makecoffee(){
-
     if(this.wateramount>0){
         this.boilwater()
         console.log("coffee is ready")
@@ -37,7 +36,7 @@ makecoffee(){
         }
 
         let machine=new CoffeMachine()
-        machine.fillwater(780)
+        machine.fillwater(0)
         machine.makecoffee()
     </script>
 </body>
