@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Car Animation</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB, #4682B4);
+            transition: background 0.5s ease-in-out;
+        }
+
+        /* Road */
+        .road {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background: #333;
+        }
+
+        /* Moving Road Lines */
+        .road::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: repeating-linear-gradient(
+                to right, 
+                white 0px, 
+                white 40px, 
+                transparent 40px, 
+                transparent 80px
+            );
+            animation: moveLines 1.5s linear infinite;
+        }
+
+        @keyframes moveLines {
+            from { transform: translateX(0); }
+            to { transform: translateX(-80px); }
+        }
+
+        /* Car */
+        .car {
+            position: absolute;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 100px;
+            background: linear-gradient(to right, red, darkred);
+            border-radius: 20px;
+            animation: bounce 0.3s ease-in-out infinite alternate;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Suspension Effect */
+        @keyframes bounce {
+            from { transform: translateX(-50%) translateY(2px); }
+            to { transform: translateX(-50%) translateY(-2px); }
+        }
+
+        /* Windows */
+        .window {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 40px;
+            background: lightblue;
+            border-radius: 5px;
+        }
+
+        .window:nth-child(2) {
+            left: 120px;
+        }
+
+        /* Wheels */
+        .wheel {
+            position: absolute;
+            bottom: -20px;
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            border: 5px solid gray;
+            animation: rotateWheels 0.5s linear infinite;
+        }
+
+        @keyframes rotateWheels {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .front-wheel {
+            left: 20px;
+        }
+
+        .back-wheel {
+            right: 20px;
+        }
+
+        /* Headlights */
+        .headlights {
+            position: absolute;
+            top: 30px;
+            right: -40px;
+            width: 50px;
+            height: 20px;
+            background: yellow;
+            box-shadow: 0 0 50px 20px yellow;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Night Mode */
+        .night-mode {
+            background: linear-gradient(to bottom, #121212, #2c2c2c) !important;
+        }
+
+        /* Buttons */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #ff5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #c70039;
+        }
+
+    </style>
+</head>
+<body id="body">
+
+    <!-- Road -->
+    <div class="road"></div>
+
+    <!-- Car -->
+    <div class="car" id="car">
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="wheel front-wheel"></div>
+        <div class="wheel back-wheel"></div>
+        <div class="headlights" id="headlights"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="controls">
+        <button class="btn" onclick="toggleLights()">Toggle Headlights</button>
+        <button class="btn" onclick="changeSpeed()">Increase Speed</button>
+    </div>
+
+    <script>
+        let isNightMode = false;
+        let speed = 1.5;
+
+        // Toggle Headlights & Night Mode
+        function toggleLights() {
+            let headlights = document.getElementById("headlights");
+            let body = document.getElementById("body");
+            
+            if (isNightMode) {
+                headlights.style.opacity = "0";
+                body.classList.remove("night-mode");
+                isNightMode = false;
+            } else {
+                headlights.style.opacity = "1";
+                body.classList.add("night-mode");
+                isNightMode = true;
+            }
+        }
+
+        // Change Speed of Road
+        function changeSpeed() {
+            speed -= 0.5;
+            document.querySelector(".road::before").style.animationDuration = speed + "s";
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Car Animation</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB, #f4a261);
+        }
+
+        /* Road */
+        .road {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: #333;
+        }
+
+        /* Road Lines */
+        .road::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: repeating-linear-gradient(
+                to right, 
+                white 0px, 
+                white 40px, 
+                transparent 40px, 
+                transparent 80px
+            );
+            animation: moveLines 2s linear infinite;
+        }
+
+        @keyframes moveLines {
+            from { transform: translateX(0); }
+            to { transform: translateX(-80px); }
+        }
+
+        /* Car */
+        .car {
+            position: absolute;
+            bottom: 100px;
+            left: -250px;
+            width: 250px;
+            height: 100px;
+            background: red;
+            border-radius: 20px;
+            animation: moveCar 5s linear infinite;
+        }
+
+        @keyframes moveCar {
+            from { left: -250px; }
+            to { left: 100%; }
+        }
+
+        /* Windows */
+        .window {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 40px;
+            background: lightblue;
+            border-radius: 5px;
+        }
+
+        .window:nth-child(2) {
+            left: 120px;
+        }
+
+        /* Wheels */
+        .wheel {
+            position: absolute;
+            bottom: -20px;
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            border: 5px solid gray;
+            animation: rotateWheels 0.5s linear infinite;
+        }
+
+        @keyframes rotateWheels {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .front-wheel {
+            left: 20px;
+        }
+
+        .back-wheel {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="road"></div>
+
+    <div class="car">
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="wheel front-wheel"></div>
+        <div class="wheel back-wheel"></div>
+    </div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                height:100px;
+                width:100px;
+                background-color: aqua;
+                border:2px solid red;
+                animation: rotateLoop 4s linear infinite;
+                /* transition:width 4s linear 1s,transform 2s; */
+            }
+            @keyframes rotateLoop {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            /* div:hover{
+                width:200px;
+                transform: rotate(360deg);
+            } */
+        </style>
+    </head>
+    <body>
+        <div> -->
+
+        </div>
+        
+    </body>
+    </html>
