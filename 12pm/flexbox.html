@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border:2px solid red;
+            height:400px;
+           display: flex; 
+           /* flex-direction: row;
+           flex-wrap: wrap; */
+           flex-flow:wrap row;
+           /* justify-content: flex-end;
+           align-items: flex-end; */
+        }
+        .box{
+            width:100px;
+            border:2px solid green;
+            margin:10px ;
+        }
+        #box1{
+            order:1
+        }
+        #box2{
+            order:2;
+            flex-grow: 1;
+        }
+        #box5{
+flex-basis:200px;
+        }
+
+
+        button:hover{
+            font-size: 40px;
+            color: blue;
+            background-color: white;
+        }
+
+        h1::before{
+            content: "$";
+        }
+
+        h1::after{
+            content:"$"
+        }
+        /* body{
+            background-image: url("https://media.istockphoto.com/id/1212911887/photo/futuristic-digital-block-chain-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=2kg3Nc4k9f3LbW3zn_GaM5OLTM9A8JJMMIV-jYhGIS4=");
+            background-repeat: no-repeat;
+            background-size:cover ;
+            /* background-position: center; */
+            height:100%;
+        } */
+        div{
+            height:400px;
+            border:2px solid white;
+            background-image:radial-gradient(at center ,red,orange,blue,green,purple,rgb(230, 248, 68)) ;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+    <h1>excellence</h1>
+    <!-- <div class="container">
+        <div class="box"  id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box" id="box5">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+    </div><br>
+    <br>
+<button>clickme</button> -->
+    <!--
+    
+    parent properties:
+    1. flex-direction : row;(by default)
+                    :column
+                    :row-reverse;
+                    :column-reverse;
+
+    2.flex-wrap: wrap;
+               :nowrap;
+               :wrap-reverse;
+
+    3.flex-flow : combination of flex-direction and flex-wrap;
+
+    3.justify-content :space-evenly;
+                      :space-between;
+                      :space-around;
+                      :flex-end;
+                      :flex-start;
+                      : center
+
+    4.align-items: flex-start;
+                 :flex-end;
+                 :center;
+
+
+                 Child Properties 
+                1 order : by default all childs has order 0 , the child having highest order willbe placed at the end 
+
+                2.flex-basis: defines the initail  width of child along main-axis 
+
+                3.flex-grow: element at the end can occupy the lft over space of parent , by default all childs has grow 0 
+
+
+                background-image : 1image 
+                                    2 colors (gradients)
+
+                                    linear-gradient(to right, c,c,c)
+                                    conic-gradient(at center ,c,c,c)
+                                    radial-gradient(at center,c,c,c)
+
+                                    html colors :
+                                    hsl  :hue saturation lightness
+                                    hex:hexadecimal color values
+                                    rgb :red green blue
+    -->
+</body>
+
+</html>
