@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-shadow: 60px 20px 1px green;
+        }
+        .ab{
+            height:300px;
+            width:300px;
+            border:2px solid blue;
+            /* box-shadow: 20px 40px 20px blue; */
+            background-color: aqua;
+            /* transition: width 2s; */
+            /* transition-property:width;
+            transition-duration: 4s;
+            transition-timing-function:ease-in;
+            transition-delay: 2s; */
+            transition: background-color 4s linear 1s,transform 2s;
+
+        }
+/* 
+        div:hover{
+  background-color: aquamarine;
+            transform: rotateZ(40deg);
+            /* background-color: blue; 
+        } */
+    </style>
+</head>
+<body>
+    <h1>excellence</h1>
+
+
+    <div class="ab">
+
+    </div>
+    <br><br><br>
+
+
+    <div style="text-align: center;">
+        <h2>STUDENT FORM</h2>
+        <form>
+            <label>NAME</label>
+            <input type="text" placeholder="enter name">
+            <br>
+            <label>DATE</label>
+            <input type="date"><br>
+            <label>ADDRESS</label>
+            <textarea></textarea><br>
+            <label>SELECT COUNTRY</label>
+            <select>
+                <option>China</option>
+                <option>Japan</option>
+            </select>
+            <br>
+            <label>Choose file</label>
+            <input type="file"><br>
+            <label>Gender</label>
+            <input type="radio" name="g1">male
+            <input type="radio" name="g1">female
+            <br>
+            <label>Mobile number&phone; </label>
+            <input  type="tel" maxlength="10"><br>
+            <lable>Quantity</lable>
+            <input type="number" max="3" min="1"><br>
+            <label>EMail</label>
+            <input type="email" value="eg@gmail.com">
+            <br>
+            <label>Time</label>
+            <input type="time"><br>
+            <input type="submit">
+            <input type="reset">
+            <button>Clickme</button>
+        </form>
+
+    </div>
+    <!--
+     transition-property: width
+     transition-duration:3s
+     transition-timing-function:linear (same speed)
+                            :ease-in (slow start)
+                            :ease-out (slow end)
+                            :ease-in-out (slow start then same them slow end)
+    transition-delay :2s
+
+
+
+    transform 
+
+    2D transform  
+
+    translate() : original position shift, value in px
+               translateX()
+               translateY()
+    rotate():value in deg
+
+    scale():value lies between 1-5
+
+
+    skew():title
+    skewX()
+    skewY()
+
+    3D transform
+    rotateX()
+    rotateY()
+    rotateZ()
+    -->
+    
+</body>
+</html>
