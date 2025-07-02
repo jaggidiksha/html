@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // loops :
+        // console.log("hello")
+
+        // for loop:
+        //   syntax
+        // for (variable initailization;condition;increment/decrement){
+        // statement
+        // }
+
+        // for(let i=1;i<=1000;i++){
+        //     console.log("hello")
+        // }
+
+
+        // for(let i=14;i<=140;i=i+14){
+        //     console.log(i)
+        // }
+
+
+        //  for(let i=190;i>=19;i=i-19){
+        //     console.log(i)
+        //  }
+
+        // odd number : 1,3,5,7
+        // number%2!=0 
+        // even number: 2,4,6,8
+        // number%2==0
+
+        //    for (let i=1;i<=50;i++){
+        //     if(i%2!=0){
+        //         console.log(i)
+        //     }
+        //    }
+
+        // for(let i=50;i<=100;i++){
+        //     if(i%2==0){
+        //         console.log(i)
+        //     }
+        // }
+
+        // for(let i=1;i<=10;i++){
+        //     let b=6*i
+        //     document.write("6*"+i+"="+b+"<br>")
+        // }
+    //  iterable objects  : strings ,array,objects
+    // non-iterable objects :integer,boolean
+
+        // for -in : it iteate over the iterable objects 
+        // syntax:
+        // for(variable in objectname){
+            // code block 
+        // }
+
+        // let qw={
+        //     name:"john",
+        //     occupation:"developer",
+        //     age:23
+        // }
+
+        // to get keys
+        // for(let x in qw){
+        //     console.log(x)
+        // }
+        //  to get values 
+    //     for(let x in qw){
+    //   console.log(qw[x])
+    //     }
+
+    //     // to get both 
+    //     for (x in qw){
+    //         console.log(x,qw[x])
+    //     }
+
+
+        // let arr=[3,4,5,6,7,"car"]
+        // for(let y in arr){
+        //     console.log(y)
+        // }
+        // for(let y in arr){
+        //     console.log(arr[y])
+        // }
+        // for-of: it iterate over the vlaues of iterable objects 
+        // syntax:
+        // for(variable of objectname){
+        //     // codeblock
+        // }
+
+        // let arr=[2,3,4,5,6,"train"]
+        // for(let a of arr){
+        //     console.log(a)
+        // }
+
+
+        // let str="car train bus";
+        // for(let b of str){
+        //     console.log(b)
+        // }
+        // for (let a in str){
+        //     console.log(a)
+        // }
+        // forEach: 
+//         let ary=[2,3,4,5,6,7]
+// ary.forEach(function(x){
+// console.log(x*2)
+// })
+        // while loop:
+
+        // variable  initi 
+        //         while(condition){
+        // statement 
+        //incremenet/decrement
+        // }
+
+        // let i = 1;
+        // while (i <= 10) {
+        //     console.log("hello")
+        //     i++
+        // }
+
+        // do-while loop
+
+        // syntax:
+        // variable initi 
+        // do{
+        //     statement 
+        //     increment /decrement
+        // }
+        // while(condition)
+
+        // let i=11;
+        // do{
+        //     console.log("hello")
+        //     i++
+        // }
+        // while(i<=10)
+
+        // alert("hii") 
+        // let a=confirm("are you 18 +?")
+        // document.write(a)
+
+        // let b=prompt("enter your name")
+        // document.write(b)
+
+
+
+        function  test(objj){
+            for(let key in objj){
+                console.log(key ,objj[key])
+            }
+        }
+        let obj={
+            onion:89,
+            tomato:56,
+            potato:45
+        }
+        test(obj)
+    </script>
+</body>
+
+</html>
