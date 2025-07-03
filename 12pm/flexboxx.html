@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border:2px solid red;
+            height:400px;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow:wrap row ;
+            /* align-items: flex-start; */
+            /* justify-content:space-between; */
+        }
+        .box{
+            border:2px solid green;
+            width:100px;
+            margin:10px;
+            
+        }
+        #box1{
+            order:1;
+        }
+        #box2{
+            order:3;
+            flex-grow: 1;
+        }
+        #box6{
+            flex-basis: 200px;
+        }
+        button:hover{
+            background-color: aqua;
+            font-size: 20px;
+        }
+        h1::before{
+            content:"%"
+        }
+        h1::after{
+            content:"$"
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EXcellence Technology</h1>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box"  id="box2">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box"  id="box6">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+    </div>
+    <br>
+    <button>clickme!</button>
+    <br><br>
+  <div style="text-align: center;">
+    <h1>STUDENT FORM</h1>
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="enter your name"><br><br>
+        <label>Date</label>
+        <input type="date"><br><br>
+        <label>Address</label>
+        <textarea></textarea><br><br>
+        <label>Select country</label>
+        <select>
+            <option>India</option>
+            <option value="china">China</option>
+            <option>Japan</option>
+        </select>
+        <br><br>
+        <label>Choose file</label>
+        <input type="file"><br><br>
+        <label>Gender</label>
+        <input type="radio" name="g1">Male
+        <input type="radio" name="g1">Female<br>
+        <br>
+        <label>Mobile number</label>
+        <input type="tel" maxlength="10"><br><br>
+        <label>Quantity</label>
+        <input type="number" max="1" min="5"><br><br>
+        <label>Email</label>
+        <input type="email" value="eg@gmail.com"><br><br>
+        <label>Time</label><input type="time"><br><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+  </div>
+</body>
+
+</html>
