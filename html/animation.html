@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            animation-name: diksha;
+            animation-duration: 4s;
+            position: relative;
+            animation-delay:2s; 
+            animation-iteration-count:2;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes diksha {
+
+            /* from{background-color: pink;}
+            to{background-color: green;} */
+            0% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: red;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+</body>
+
+</html>
