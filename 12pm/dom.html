@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>TO-DO LIST</h1>
+    <input type="text" id="myinput">
+    <button onclick="newelement()">Add</button>
+    <ul id="myul">
+
+    </ul>
+    <!-- <div>
+        <p class="para">hello html</p>
+        <p class="para">hello js</p>
+        <p class="para">hello react</p>
+    </div> -->
+    <script>
+        //scoping determines the visibility, accessibilty of variables,function and objects in different parts of our application. 
+        // global scope:variable are accessible anywhere in the code 
+        // local scope:vaiables are only accessible in the function /block of code they are declared in . 
+
+        //  types of local scope
+
+        // functional scope: variable are only accessible in the functions they are declared in
+        // var is functional scope
+
+        // block scope : variables are only accessible in the block of code they are declared in
+
+        // let and const are block scope 
+
+
+//         var glovar='im global'
+//         console.log(glovar)
+//         function abc(){
+//             console.log(glovar)
+//         }
+// abc()
+
+
+// function abc(){
+    // var funtiovar='im funtional scoped'
+    // console.log(funtiovar)
+// }
+// abc()
+
+// if(true){
+//     let a='local scope'
+//     // console.log(a)
+// }
+
+// arrow based function were introduced in es6
+// closures /lexical scoping (es6):closure in action says that we have two functions,
+// one is  innerfuntion and one is outerfuntion  , the innerfunction can access the parameters and variables of outerfuntion
+
+
+
+
+const outerfun=(a)=>{
+let b=70
+    const innerfun=()=>{
+let sum=a+b
+console.log(`the sum of two numbers is ${sum}`)
+    }
+    innerfun()
+
+}
+outerfun(10)
+
+
+// the sum of two numbers is 80 
+// template literals /backticks ``
+// string+expression(sum)
+// expression:${sum}
+// string interpolation
+
+
+
+
+
+
+        function newelement() {
+
+             li = document.createElement('li')
+
+            inputvalue = document.getElementById('myinput').value
+            if (inputvalue === '') {
+                alert('fill to-do first')
+            }
+
+            textnode = document.createTextNode(inputvalue)
+            li.appendChild(textnode)
+            // li.appendChild(document.createTextNode(inputvalue))
+
+
+            dltbtn = document.createElement('button')
+            dltbtn.appendChild(document.createTextNode('delete'))
+            dltbtn.onclick = function () {
+                let item = this.parentElement
+                item.remove()
+            }
+            li.appendChild(dltbtn)
+
+
+            editbtn = document.createElement('button')
+            editbtn.appendChild(document.createTextNode('edit'))
+            editbtn.onclick = function () {
+                newtext = prompt('enter new text')
+                if (newtext !== '' && newtext !== null) {
+                    textnode.nodeValue = newtext
+                }
+            }
+            li.appendChild(editbtn)
+
+
+            document.getElementById('myul').appendChild(li)
+            document.getElementById('myinput').value=''
+        }
+        //       let paragrph=  document.querySelector('.para')
+        //       console.log(paragrph.textContent)
+        //     let data=  document.querySelectorAll('.para')
+        // data.forEach(function(paragraph){
+        // console.log(paragraph.textContent)
+        // })
+
+        //     let ary=[2,3,4,5]
+        //     const ab=(para1,para2)=>{
+        // //code block
+        //     }
+        //     ab(argu1,argu2)
+        //     ary.forEach(function(x){
+        //         console.log(x*2)
+        //     })
+
+        //     ary.forEach((a)=>{
+        //    console.log(a*3)
+        //     })
+
+
+
+    </script>
+</body>
+
+</html>
