@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        function updateclock(){
+           
+        }
+        setInterval(updateclock,1000)
+        updateclock()
+
+console.log('hi')
+
+setTimeout(()=>{
+    console.log('hello')
+},5000)
+
+console.log('hey')
+
+
+let d=new Date();
+document.write(d+"<br>")
+document.write(d.getDate()+"<br>"+d.toTimeString()+"<br>"+d.getHours()+"<br>"+d.getMinutes()+"<br>"+d.getMonth())
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
