@@ -1,1 +1,1 @@
-hello this is the data i got from  ajax 
+hello this is the data i got from  fetch 

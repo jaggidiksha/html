@@ -1,0 +1,24 @@
+oops : object oriented programmings 
+js is not purely oops based but it supports the principle of oops
+
+4 principles
+encapsulation: it hides the inner working and only expose the essential parts so it acts as a capsule 
+
+abstraction : hiding the complex details of an objects and exposing only the necessary parts 
+
+polymorphism
+inheritance 
+
+let obj={
+    name:"john",
+    age:23
+}
+
+in oops we do not create an object instead  we create a blueprint of an object  known as class 
+
+
+class > methods >properties 
+
+class >new property > constructor method 
+
+methods are always accessed with dot . 
