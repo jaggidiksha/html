@@ -6,8 +6,9 @@ encapsulation: it hides the inner working and only expose the essential parts so
 
 abstraction : hiding the complex details of an objects and exposing only the necessary parts 
 
-polymorphism
-inheritance 
+polymorphism : it allows same method to have different implementations in derived classes 
+
+inheritance : it allows us to  inherit the methods and properties from the main class
 
 let obj={
     name:"john",
