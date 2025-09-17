@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="studentform">
+        name<input type="text" id="name"><br>
+        age<input type="number" id="age"><br>
+        <button>submit</button>
+    </form>
+    <script>
+        form = document.getElementById("studentform")
+        form.addEventListener("submit", function (e) {
+            e.preventDefault()
+
+          let namee=  document.getElementById("name").value;
+          let agee=  document.getElementById("age").value;
+
+
+
+        //   localStorage.setItem("name",namee)
+        //   localStorage.setItem("age",agee)
+          let formdatajson={
+            "name":namee,
+            "age":agee
+          }
+
+
+        let formdata= JSON.stringify(formdatajson)
+
+        localStorage.setItem("data",formdata)
+
+
+        })
+
+        //Json>string :JSON.stringify
+        //strings>json  :JSON.parse
+        //   async function abc(){
+        //     return "hello"
+        //  }
+        //  console.log(abc())
+
+
+        //   async function abc(){
+        //     return "hello"
+        //  }
+        // abc().then((result)=>{
+        //  console.log(result)
+        // })
+
+
+
+        // async function abc() {
+        //     console.log("a")
+        //     await console.log("b")
+        //     console.log("c")
+        // }
+        // abc()
+        // console.log("d")
+        // console.log("e")
+
+
+        // let ary=[2,4,3,5,6,7]
+        //     ary.map(function(x){
+        //  console.log(x*3)
+        //     })
+
+
+        // ary.map(test)
+
+        // function test(a){
+        //     console.log(a*8)
+        // }
+
+
+        // let arr=[
+        //     {
+        //         name:"diksha",
+        //         lname:"jaggi"
+        //     },
+        //     {
+        //         name:"akhil",
+        //         lname:"jaggi"
+        //     },
+        //     {
+        //         name:"abhimanyu",
+        //         lname:"jaggi"
+        //     }
+        // ]
+
+        // arr.map(function(x){
+        //       document.write(x.name+" "+x.lname)
+        // })
+
+
+        localStorage.setItem("username", "dikshajaggi")
+        let username = localStorage.getItem("username")
+        console.log(username)
+
+
+
+    </script>
+</body>
+
+</html>
